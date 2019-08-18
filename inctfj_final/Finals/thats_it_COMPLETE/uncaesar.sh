@@ -1,0 +1,1 @@
+for i in {1..26}; do echo -n "B4x_7m4y_y00_34xd_7t_ijhwduy?" | /usr/games/caesar $i ;echo " $i"; done

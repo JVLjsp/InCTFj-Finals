@@ -1,0 +1,5 @@
+Given the plaintext, ciphertext and yeah the key used for the encryption. Can you, using your cryptoskills, solve the mystery of the Secret IV?
+
+plaintext: "Welcome to InCTFj finals! Hope you are having a great time here ;)"
+ciphertext: "1614ad13f934ca0e410da7785ddb3b248377eab15cb6cd46f355f5896ce848ce6675b8d48f284bf4186c982ac74f9f9302d2d0c78ab3cd87fd61f5fa02003b38418c2e33c09882de5da99a8066a2f4e7"
+Key: "YELLOW SUBMARINE"

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Our-Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Our-Code_files/style.css">
+</head>
+<body>
+    <div>
+        <input id="message">
+        <button onclick="encode();">get the message</button>
+    </div>
+    <div>
+        <h1 id="msg"></h1>
+    </div>
+<script>
+flag = message.value;
+key = 'funcode007';
+chr = String.fromCharCode
+ord = Function.prototype.call.bind(' '.charCodeAt)
+
+function back2front(i,o){
+  o = i.split('').reverse().join('');
+  return o;
+}
+function f(a,b,c){
+  for(var i=0; i != a.length; i++){
+    var c = (c || '') + chr(ord(String(a[i])) ^ ord(String(b[i%b.length])))
+  }
+  return c;
+}
+function encode(){
+  var m = f(message.value,key)
+  for(var j =0; j != m.length;j ++){
+    m[j] = chr(ord(String(m[j])) ^ (msg.length*8));
+  }
+  m = m.split('')
+  for(var j =0; j != m.length;j ++){
+    m[j] = chr(ord(String(m[j]))+999);
+  }
+  m = m.reverse().join('')
+  console.log(m)
+  if(m=='ϿоϪϨцϽϯϭЭхлТсйИЭϩϮкійоЄϧфЧРЬЬцЅϵϰϾϴЂ϶'){
+    console.log('You got it')
+  }
+  else{
+    console.log('No! you are wrong dummy!!')
+  }
+document.getElementById("msg").innerHTML = 'u got it!!! maybe not?';
+}
+</script>
+
+
+</body></html>

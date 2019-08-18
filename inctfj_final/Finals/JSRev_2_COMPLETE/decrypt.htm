@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Our-Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Our-Code_files/style.css">
+</head>
+<body>
+<script>
+key = 'funcode007';
+chr = String.fromCharCode
+ord = Function.prototype.call.bind(' '.charCodeAt)
+ct='ϿоϪϨцϽϯϭЭхлТсйИЭϩϮкійоЄϧфЧРЬЬцЅϵϰϾϴЂ϶'
+ct=ct.split('').reverse()
+for(var j =0; j != ct.length;j ++){
+	ct[j] = chr(ord(String(ct[j]))-999);
+}
+var ct=ct.join('')
+for(var j =0; j != ct.length;j ++){
+	ct[j] = chr(ord(String(ct[j])) ^ 37);
+}
+for(var i=0; i != ct.length; i++){
+    var ct1 = (ct1 || '') + chr(ord(String(ct[i])) ^ ord(String(key[i%key.length])))
+}
+pt=ct1
+alert(pt)
+</script>
+</body></html>
